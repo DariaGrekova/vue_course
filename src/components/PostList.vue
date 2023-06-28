@@ -1,5 +1,5 @@
 <template>
-  <div class="post" v-for="post in posts">
+  <div class="post" v-for="post in posts" v-bind:key="post">
     <div><strong>Название:</strong> {{post.title}}</div>
     <div><strong>Описание:</strong> {{post.body}}</div>
   </div>
@@ -10,7 +10,7 @@ export default {
   props: {
     posts: {
       type: Array,
-      require: true,
+      required: true,
     }
   }
 }
